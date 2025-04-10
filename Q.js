@@ -42,7 +42,7 @@ for (let i = 0; i < text.length; i++) {
 displayChat();
 
 function goHome() {
-    window.location.href = "JAJA.html";
+    window.location.href = "index.html";
 }
 
 window.addEventListener("load", function() {

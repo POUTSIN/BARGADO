@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault(); 
             scatterLeaves();
             setTimeout(() => {
-                window.location.href = "JAJA.html";
+                window.location.href = "index.html";
             }, 1500);
         });
     } else {

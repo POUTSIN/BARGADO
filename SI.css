@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(174, 205, 239);
+    font-weight: bold;
+}
+
+.music-sheet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stave {
+    position: relative;
+    width: 76%;
+    height: 150px;
+    background: white;
+    border: none;
+    border: 2px solid black;
+    left: 20px;
+    margin: 20px 0;
+}
+
+.lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.stave .lines{
+    display: block;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: black;
+}
+
+.line:nth-child(1) { top: 10%; }
+.line:nth-child(2) { top: 30%; }
+.line:nth-child(3) { top: 50%; }
+.line:nth-child(4) { top: 70%; }
+.line:nth-child(5) { top: 90%; }
+
+.f-clef {
+    position: absolute;
+    left: 8px;
+    top: 20px;
+    font-size: 90px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInScale 1s forwards ease-out;
+}
+
+.time-signature {
+    position: absolute;
+    left: 90px;
+    top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideIn 1s forwards ease-out 0.5s;
+}
+
+.note {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    animation: fadeInScale 1s forwards ease-out;
+}
+
+@font-face {
+    font-family: 'Bravura';
+    src: url('path-to-font/Bravura.otf') format('opentype');
+}
+
+.lyrics {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Bravura', serif;
+    font-size: 1.2em;
+}
+
+.lyrics span {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0;
+    animation: slideIn 1s forwards ease-out 1s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0; 
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+h1 span {
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    border: 2px solid black;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+h1 span.black {
+    background: black;
+    color: white;
+}
+
+h1 span.white {
+    background: white;
+    color: black;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes keyPress {
+    0% { transform: translateY(0); background: inherit; }
+    50% { transform: translateY(5px); background: gray; }
+    100% { transform: translateY(0); background: inherit; }
+}
+
+#music-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.notes {
+    position: absolute;
+    top: 100%;
+    opacity: 0.8;
+    animation: danceNotes 5s ease-in-out forwards;
+}
+
+@keyframes danceNotes {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-10vw) translateY(-25vh) rotate(15deg);
+    }
+    50% {
+        transform: translateX(10vw) translateY(-50vh) rotate(-15deg);
+    }
+    75% {
+        transform: translateX(-10vw) translateY(-75vh) rotate(15deg);
+    }
+    100% {
+        transform: translateX(10vw) translateY(-100vh) rotate(-15deg);
+        opacity: 0;
+    }
+}

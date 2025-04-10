@@ -1,0 +1,71 @@
+body {
+    background-image: url('SMI.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: relative;
+    height: 90vh;
+    width: 100vh;
+}
+
+.white-box {
+    background-color: rgba(255, 255, 255, 0.8); 
+    width: 100%;  
+    margin: 30px; 
+    height: auto;
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    left: 20%;
+    top: -7px;
+    line-height: 1.5;
+    opacity: 80%;
+    transform: translateX(50%);
+}
+
+.letter {
+    margin: 0 auto;
+    text-indent: 40px;
+    text-align: justify;
+}
+
+.white-box p {
+    text-indent: 40px; 
+    text-align: justify; 
+    margin-bottom: 10px; 
+}
+
+.white-box p.no-indent {
+    text-indent: 0px; 
+    font-weight: bold; 
+}
+
+.cen{
+    position: absolute; 
+    top: 1483%; 
+    left: 53%;        
+    transform: translateX(-50%); 
+    width: 620px;      
+    max-width: 700px; 
+    z-index: 9999;    
+    height: auto;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(calc(360 * var(--hue)), 100%, 50%);
+    opacity: 0.8;
+    animation: fall linear infinite;
+    --hue: calc(100 * var(--random));
+    transform: rotate(var(--angle));
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}

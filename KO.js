@@ -84,7 +84,7 @@ function typeWriter() {
 }
 
 function goHome() {
-    window.location.href = "JAJA.html"; 
+    window.location.href = "index.html"; 
 }
 
 window.onload = function () {

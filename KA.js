@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         setTimeout(() => {
-            window.location.href = "JAJA.html"; 
+            window.location.href = "index.html"; 
         }, spans.length * 150);
     });
 });

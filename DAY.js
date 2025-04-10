@@ -32,5 +32,5 @@ window.addEventListener("load", function() {
 
 
 function goHome() {
-    window.location.href = "JAJA.html"; 
+    window.location.href = "index.html"; 
 }

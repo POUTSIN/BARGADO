@@ -42,7 +42,7 @@ body {
 .cen{
     position: absolute; 
     top: 1590%; 
-    left: 53%;        
+    left: 60%;        
     transform: translateX(-50%); 
     width: 620px;      
     max-width: 700px; 

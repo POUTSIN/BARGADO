@@ -103,7 +103,6 @@ body {
     display: block;
     text-align: center;
     width: 100%;
-    background: red;
 }
 
 .poem-container {
@@ -127,6 +126,7 @@ body {
     margin: 0;
 }
 
-p{
-    top: 40px;
+.poem-container p{
+    margin: 0;
+    padding: 0;
 }

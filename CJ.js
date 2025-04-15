@@ -41,22 +41,19 @@ window.addEventListener("load", function() {
     }
 });
 
-let startTime = localStorage.getItem("startTime");
-
-if (!startTime) {
-    startTime = Date.now();
-    localStorage.setItem("startTime", startTime);
-} else {
-    startTime = parseInt(startTime);
-}
-
 function updateTimer() {
-    const now = Date.now();
-    const elapsedTime = now - startTime;
+   
+    const now = new Date(
+        new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" })
+    );
 
-    const totalMinutes = Math.floor(elapsedTime / (1000 * 60));
-    const days = Math.floor(totalMinutes / 1440); // 1440 minutes in a day
-    const hours = Math.floor((totalMinutes % 1440) / 60);
+    const startTime = new Date("2025-03-31T00:00:00+08:00"); 
+
+    const diffMs = now - startTime;
+
+    const totalMinutes = Math.floor(diffMs / (1000 * 60));
+    const days = Math.floor(totalMinutes / (60 * 24));
+    const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
     const minutes = totalMinutes % 60;
 
     const timeString =
@@ -68,4 +65,4 @@ function updateTimer() {
 }
 
 updateTimer();
-setInterval(updateTimer, 60000); // Update every minute
+setInterval(updateTimer, 60000);

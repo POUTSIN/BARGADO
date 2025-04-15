@@ -46,24 +46,26 @@ let startTime = localStorage.getItem("startTime");
 if (!startTime) {
     startTime = Date.now();
     localStorage.setItem("startTime", startTime);
+} else {
+    startTime = parseInt(startTime);
 }
 
 function updateTimer() {
-    let elapsedTime = Math.floor((Date.now() - parseInt(startTime)) / 1000); 
-    let days = Math.floor(elapsedTime / 86400);
-    let hours = Math.floor((elapsedTime % 86400) / 3600);
-    let minutes = Math.floor((elapsedTime % 3600) / 60);
+    const now = Date.now();
+    const elapsedTime = now - startTime;
 
-   
-    let timeString = 
+    const totalMinutes = Math.floor(elapsedTime / (1000 * 60));
+    const days = Math.floor(totalMinutes / 1440); // 1440 minutes in a day
+    const hours = Math.floor((totalMinutes % 1440) / 60);
+    const minutes = totalMinutes % 60;
+
+    const timeString =
         (days < 10 ? "0" : "") + days + "d " +
-        (hours < 10 ? "0" : "") + hours + "h " + 
+        (hours < 10 ? "0" : "") + hours + "h " +
         (minutes < 10 ? "0" : "") + minutes + "m";
 
-    
     document.getElementById("timer").innerText = timeString;
 }
 
-
-setInterval(updateTimer, 60000);
-updateTimer(); 
+updateTimer();
+setInterval(updateTimer, 60000); // Update every minute

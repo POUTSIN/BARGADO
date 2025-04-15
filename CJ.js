@@ -6,7 +6,7 @@ document.querySelectorAll('.coin').forEach(coin => {
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("clickText").addEventListener("click", function() {
         this.style.color = "#FFD700"; 
-        window.location.href = "I.html";
+        window.location.href = "IMG.html";
     });
 });
 document.addEventListener("DOMContentLoaded", function() {

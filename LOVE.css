@@ -33,8 +33,8 @@ body {
     display: flex;
     animation: heart 4s linear infinite;
     z-index: 100;
-    top: 33%;
-    left: 43%;
+    top: 34%;
+    left: 40%;
 }
 
 .heart:before,

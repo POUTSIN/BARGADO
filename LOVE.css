@@ -29,12 +29,12 @@ body {
 .heart{
     position: absolute;
     height: 120px;
-    width: 160px;
+    width: 150px;
     display: flex;
     animation: heart 4s linear infinite;
     z-index: 100;
     top: 34%;
-    left: 37%;
+    left: 33%;
 }
 
 .heart:before,

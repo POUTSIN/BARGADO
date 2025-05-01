@@ -49,7 +49,7 @@ body {
 }
 
 .heart:before{
-    left: 70px;
+    left: 60px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     -webkit-transform-origin: 0 100%;

@@ -34,7 +34,7 @@ body {
     animation: heart 4s linear infinite;
     z-index: 100;
     top: 36%;
-    left: 38%;
+    left: 43%;
 }
 
 .heart:before,

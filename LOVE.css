@@ -29,7 +29,7 @@ body {
 .heart{
     position: absolute;
     height: 100px;
-    width: 120px;
+    width: 100px;
     display: flex;
     animation: heart 4s linear infinite;
     z-index: 100;

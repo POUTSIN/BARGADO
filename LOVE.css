@@ -41,7 +41,7 @@ body {
 .heart:after{
     content:"";
     position: absolute;
-    height: 130px;
+    height: 150px;
     width: 100px;
     background-color: #FFD700;
     border-radius: 50px 50px 0 0;

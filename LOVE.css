@@ -28,8 +28,8 @@ body {
 
 .heart{
     position: absolute;
-    height: 140px;
-    width: 170px;
+    height: 120px;
+    width: 160px;
     display: flex;
     animation: heart 4s linear infinite;
     z-index: 100;
@@ -41,15 +41,15 @@ body {
 .heart:after{
     content:"";
     position: absolute;
-    height: 150px;
-    width: 90px;
+    height: 140px;
+    width: 80px;
     background-color: #FFD700;
     border-radius: 50px 50px 0 0;
     animation: heart_color 5s linear infinite;
 }
 
 .heart:before{
-    left: 75px;
+    left: 80px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     -webkit-transform-origin: 0 100%;
